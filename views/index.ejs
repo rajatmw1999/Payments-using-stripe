@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Buy something</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-lg-3">
+        <form class="" action="/pay" method="post">
+          <h3 name="Product1">Product 1</h3>
+          <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="<%=publicKey%>"
+          data-amount = "30000"
+          data-name = "product1"
+          data-description = "A cute dog for sale."
+          data-locale = "auto"
+          data-currency = "inr"
+          >
+          </script>
+          <input type="hidden" name="chargeAmount" value="30000">
+          <input type="hidden" name="product" value="product1">
+        </form>
+      </div>
+      <div class="col col-lg-3">
+        <form class="" action="/pay" method="post">
+          <h3 name="Product2">Product 2</h3>
+          <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="<%=publicKey%>"
+          data-amount = "50000"
+          data-name = "product2"
+          data-description = "A cute cat for sale."
+          data-locale = "auto"
+          data-currency = "inr"
+          >
+          </script>
+          <input type="hidden" name="chargeAmount" value="50000">
+          <input type="hidden" name="product" value="product2">
+        </form>
+      </div>
+      <div class="col col-lg-3">
+        <form class="" action="/pay" method="post">
+          <h3 name="Product3">Product 3</h3>
+          <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="<%=publicKey%>"
+          data-amount = "7"
+          data-name = "product3"
+          data-description = "A cute mouse for sale."
+          data-locale = "auto"
+          data-currency = "inr"
+          >
+          </script>
+          <input type="hidden" name="chargeAmount" value="7">
+          <input type="hidden" name="product" value="product3">
+        </form>
+      </div>
+      <div class="col col-lg-3">
+        <form class="" action="/pay" method="post">
+          <h3 name="Product4">Product 4</h3>
+          <script type="text/javascript" src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          data-key="<%=publicKey%>"
+          data-amount = "2345"
+          data-name = "cute-dog"
+          data-description = "A cute rabbit for sale."
+          data-locale = "auto"
+          data-currency = "inr"
+          >
+          </script>
+          <input type="hidden" name="chargeAmount" value="2345">
+          <input type="hidden" name="product" value="product4">
+        </form>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
